@@ -1,20 +1,18 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
-  <form action="exe01.php" method="post"></form>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro e Cálculo de Média</title>
 </head>
 <body>
-
-  <p>Digite seu nome: <input type="text" name="cxnome" id=""> </p>
-
-  nota1=<input type="number"  min="0" max="10"> <br>
-  nota2=<input type="number"  min="0" max="10"> <br>
-  nota3=<input type="number"  min="0" max="10"> <br>
-
-  <input type="submit" value="Enviar">
-
+    <h1>Cadastro de Estudante e Cálculo de Média</h1>
+    <form action="exe01.php" method="get">
+        <p>Digite seu nome: <input type="text" name="cxnome" required></p>
+        <p>Digite a primeira nota (0 a 10): <input type="number" name="nota1" min="0" max="10" required></p>
+        <p>Digite a segunda nota (0 a 10): <input type="number" name="nota2" min="0" max="10" required></p>
+        <p>Digite a terceira nota (0 a 10): <input type="number" name="nota3" min="0" max="10" required></p>
+        <input type="submit" value="Enviar">
+    </form> 
 </body>
 </html>
