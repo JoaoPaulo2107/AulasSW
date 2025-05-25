@@ -1,7 +1,6 @@
 <?php
 
 class Produto {
-    // Atributos privados
     private $nome;
     private $preco;
     private $quantidade;
@@ -12,40 +11,22 @@ class Produto {
         $this->quantidade = $quantidade;
     }
 
-    public function getNome() {
-        return $this->nome;
+    public function mostrar() {
+        echo "Nome: $this->nome<br>";
+        echo "Preço: R$ $this->preco<br>";
+        echo "Quantidade: $this->quantidade<br><br>";
     }
-
-    public function setNome($nome) {
-        $this->nome = $nome;
-    }
-
- 
-    public function getPreco() {
-        return $this->preco;
-    }
-
-    public function setPreco($preco) {
-        $this->preco = $preco;
-    }
-
-    public function adicionarEstoque($qtd) {
+    
+    public function adicionar($qtd) {
         if ($qtd > 0) {
-            $this->quantidade =$this->quantidade + $qtd;
+            $this->quantidade += $qtd;
         }
     }
 
-   
-    public function removerEstoque($qtd) {
+    public function remover($qtd) {
         if ($qtd > 0 && $qtd <= $this->quantidade) {
-            $this->quantidade =$this->quantidade - $qtd;
+            $this->quantidade -= $qtd;
         }
-    }
-
-    public function mostrarDetalhes() {
-        echo "Produto: " . $this->nome . PHP_EOL;
-        echo "Preço: R$ " . number_format($this->preco, 2, ',', '.') . PHP_EOL;
-        echo "Quantidade em estoque: " . $this->quantidade . PHP_EOL;
     }
 }
 
