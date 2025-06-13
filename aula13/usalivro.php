@@ -17,5 +17,6 @@ echo $livro1->exibirStatus() . "<br>";
 $livro1->devolver();
 echo $livro1->exibirStatus() . "<br>";
 
+//<pre>   </pre> ajuda a melhorar a visão do print_r
 
 ?>
